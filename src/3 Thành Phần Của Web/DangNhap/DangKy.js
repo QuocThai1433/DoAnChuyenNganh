@@ -1,6 +1,6 @@
 import { dangKy } from "Action/ApiCall/user-api";
 import { useState } from "react";
-import "./Form.css";
+import "./Form.scss";
 
 function DangKy(props) {
   const [fullName, setFullName] = useState("");
@@ -24,7 +24,7 @@ function DangKy(props) {
     <>
       <div className="Form">
         <div className="contain-form">
-          <h2 style={{ textAlign: "center" }}>Đăng ký</h2>
+          <h2>Đăng ký</h2>
           <div className="login-form">
             <form action="" onSubmit={onSubmit}>
               <div className="form-group">
@@ -61,16 +61,29 @@ function DangKy(props) {
                 <label htmlFor="repw">Nhập lại mật khẩu</label>
                 <input type="password" id="repw" />
               </div>
-              <button type="submit" className="btn-form">
-                Đăng Ký
-              </button>
-              <a href="/">Đăng nhập</a>
-            </form>
+             <div className="radio">
+             <div>
+             <input type="radio"/>
+                <label for="html">Nam</label>
+             </div>
+                 <div>
+                 <input type="radio"/>
+                    <label for="html">Nữ</label>
+                 </div>
+             </div>
+                    <button type="submit" className="btn-form">
+                      Đăng Ký
+                    </button>
+                    <div className="btnlogin">
+                      <label>Bạn đã có tài khoản?</label>
+                      <a href="/">Đăng nhập</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
           </div>
-        </div>
-      </div>
-    </>
-  );
+        </>
+        );
 }
 
-export default DangKy;
+        export default DangKy;
