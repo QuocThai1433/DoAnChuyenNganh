@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600');// truy vấn import thư viện cho font chữ từ google cho font-family (1)
+//gán biến để gọi lại
+//Kích thước
+$gap: 10px;
+$chieucao-header:36px;
+$chieucao-footer:36px;
+$chieucao-border-radius:4px; // độ tròn của thanh công việc
+$card-border-radius: 4px;
+$nav-app-height: 5vh;
+$nav-board-height: 6vh;
+$board-content-height:88vh;
+$column-height: calc( #{$board-content-height} - #{$gap * 2 } ) ;
+
+//Màu
+$mauxanh: rgb(98, 157, 171);
+$mauphu:rgb(117, 192, 211);
+$mauthanhcongviec:#ebecf0;
+$common-element-bg: rgba(255, 255, 255, 24);
+$app-main-text-color: #333;
+$Mau-danger:#ee5253;
+$input-border-color:  rgb(4, 160, 244);
+//screens

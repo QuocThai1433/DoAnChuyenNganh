@@ -1,0 +1,75 @@
+@import './Gán Biến.scss';
+@import '~bootstrap/scss/bootstrap';
+
+body
+{
+    margin: 0;
+    font-family: 'Sourcce Sans Pro', sans-serif;// cần truy vấn thư viện (1)
+    font-size: 14px;
+    line-height: 1.3em;
+}
+.trello-huuquy
+{
+    height: 100vh;//vh giúp căn chỉnh dù màn hình bao nhiu
+    overflow: hidden;
+    background-color: $mauxanh;//màu giao diện
+    color: $app-main-text-color;
+    .icon
+    {
+        font-size: 14px;
+        margin: 0 3px;
+    }
+    .huuquy-trello-container
+    {
+        margin: 0 15px;
+        padding: 0;
+    }
+    textarea:focus, 
+    textarea.form-control:focus, 
+    input.form-control:focus, 
+    input[type=text]:focus, 
+    input[type=password]:focus, 
+    input[type=email]:focus, 
+    input[type=number]:focus, 
+    [type=text].form-control:focus, 
+    [type=password].form-control:focus, 
+    [type=email].form-control:focus, 
+    [type=tel].form-control:focus, 
+    [contenteditable].form-control:focus {
+      box-shadow: inset 0 -1px 0 #ddd;
+      border: 1px solid $input-border-color ;
+    }
+    .btn:focus, .btn:active
+    {
+        outline: none !important;
+        box-shadow: none im !important;
+    }
+        //thiết kế hearder
+    .huuquy-content-editable
+    {
+        background-color: inherit;
+        border: none;
+        font-size: inherit;
+        font-weight: inherit;
+        cursor: pointer;
+        &:focus
+        {
+            background-color: white;
+            
+        }
+    }
+    span.cancel-icon
+    {
+        margin-left: $gap;
+        cursor: pointer;
+        i
+        {
+            font-size: 18px;
+            color: $Mau-danger;
+            &:hover
+            {
+                color: darken($Mau-danger,  10); //trỏ vào thùng rác đậm hơn
+            }
+        }
+    }
+}

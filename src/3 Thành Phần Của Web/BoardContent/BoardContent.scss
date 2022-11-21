@@ -1,0 +1,65 @@
+@import 'Gán Biến.scss';
+
+.board-content
+{
+    display: flex;
+    height: $board-content-height;
+    overflow-x: auto;//tạo thanh cuộn ngang khi tạo nhiều công việc (x là ngang y là dọc)
+    overflow-y: auto;//ẩn thanh kéo lên xuống
+    &::after
+    {
+        content: '';
+        flex: 0 0 10px;
+    }
+    //thiết kế thanh kéo ngang của toàn web
+    &::-webkit-scrollbar
+    {
+    -webkit-appearance: none;
+    }
+    &::-webkit-scrollbar:horizontal
+    {
+    height: 11px;
+    }
+    &::-webkit-scrollbar-thumb
+    {
+    background-color: $common-element-bg;
+    border-radius: 8px;
+    }
+    .column-drop-preview{
+        background-color: rgba(150, 150, 200, 0.1);
+        border: 1px dashed #abc;
+        margin: 5px 45px 5px 5px;
+    }
+    .add-new-column
+    {
+        width: 250px;
+        max-width: 250px;
+        line-height: 32px;
+        padding: 4px 0 4px 15px;
+        cursor: pointer;
+        color: #fff;
+        margin-left: $gap;
+        font-size: 15px;
+        background-color: hsla(0, 0%, 100%, .24);
+        border-radius: $chieucao-border-radius;
+        &:hover
+        {
+            background-color: hsla(0, 0%, 100%, .34); //khi trỏ vào thanh thêm bảng công việc nó sáng hơn
+        }
+    }
+    .enter-new-column
+    {
+        width: 250px;
+        max-width: 250px;
+        background-color: $mauthanhcongviec;
+        line-height: 32px;
+        padding: 4px 10px;
+        margin-left: $gap;
+        border-radius: $chieucao-border-radius;
+        input.input-enter-new-column
+        {
+            margin: 5px 0;
+        }
+    }
+    
+}
